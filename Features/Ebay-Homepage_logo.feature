@@ -5,3 +5,5 @@ Feature: EBY homepage logo validation
     Given I navigate to https://www.ebay.co.uk/
     Then I should see the EBY logo
     And close the browser
+
+    # Commit logo feature file
