@@ -13,6 +13,7 @@ public class EbayHomepagelogo {
     public void i_navigate_to_https_www_ebay_co_uk() {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("Open the browser");
+        System.out.println("Open the browser");
 
     }
     @Then("I should see the EBY logo")
