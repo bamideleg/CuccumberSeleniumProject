@@ -27,7 +27,8 @@ public class EbayHomepagelogo {
     }
     @And("close the browser")
     public void close_the_browser() {
-       System.out.println("close the browser");
+
+        System.out.println("close the browser");
     }
 
 
