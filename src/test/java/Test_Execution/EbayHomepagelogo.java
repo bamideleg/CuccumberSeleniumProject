@@ -15,6 +15,8 @@ public class EbayHomepagelogo {
         System.out.println("Open the browser");
         System.out.println("Open the browser");
         System.out.println("Open the browser");
+        System.out.println("Open the browser");
+        System.out.println("Open the browser");
 
 
     }
