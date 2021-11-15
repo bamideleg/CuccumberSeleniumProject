@@ -7,3 +7,6 @@ Feature: EBY homepage logo validation
     And close the browser
 
     # Commit logo feature file
+    # Commit the changes to remote branch.
+    # Merge this changes into the master branch..
+
