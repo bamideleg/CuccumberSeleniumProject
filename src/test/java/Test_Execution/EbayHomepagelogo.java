@@ -15,8 +15,6 @@ public class EbayHomepagelogo {
         System.out.println("Open the browser");
         System.out.println("Open the browser");
         System.out.println("Open the browser");
-        System.out.println("Open the browser");
-
 
 
     }
@@ -24,13 +22,17 @@ public class EbayHomepagelogo {
     public void i_should_see_the_eby_logo() {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("Logo is present");
+        System.out.println("Logo bug fixes");
 
     }
     @And("close the browser")
     public void close_the_browser() {
+
+        System.out.println("close the browser");
        driver.close();
         System.out.println("close the browser");
         System.out.println("close the browser2");
     }
+
 
 }
