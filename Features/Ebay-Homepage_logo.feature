@@ -9,4 +9,5 @@ Feature: EBY homepage logo validation
     # Commit logo feature file
     # Commit the changes to remote branch.
     # Merge this changes into the master branch..
+     # Merge this changes into the master branch.202
 
