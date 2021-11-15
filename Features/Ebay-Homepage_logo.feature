@@ -13,5 +13,6 @@ Feature: EBY homepage logo validation
      # Merge this changes into the master branch.202
 
     # New pull request
-   # New pull request testing
+    # New pull request testing
+    # Added more scenario for the to the current steps
 
