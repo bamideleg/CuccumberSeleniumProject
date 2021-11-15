@@ -23,6 +23,7 @@ public class EbayHomepagelogo {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("Logo is present");
         System.out.println("Logo bug fixes");
+        System.out.println("Logo bug fixes");
 
     }
     @And("close the browser")
