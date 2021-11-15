@@ -7,12 +7,3 @@ Feature: EBY homepage logo validation
     Then I should see the EBY logo
     And close the browser
 
-    # Commit logo feature file
-    # Commit the changes to remote branch.
-    # Merge this changes into the master branch..
-     # Merge this changes into the master branch.202
-
-    # New pull request
-    # New pull request testing
-    # Added more scenario for the to the current steps
-
