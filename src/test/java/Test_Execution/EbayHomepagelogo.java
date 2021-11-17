@@ -3,6 +3,7 @@ package Test_Execution;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,6 +21,7 @@ public class EbayHomepagelogo {
         System.out.println("Open the browser");
 
     }
+
     @Then("I should see the EBY logo")
     public void i_should_see_the_eby_logo() {
         Boolean Status = driver.findElement(By.id("gh-logo")).isDisplayed();
@@ -31,5 +33,20 @@ public class EbayHomepagelogo {
        driver.close();
         System.out.println("close the browser");
 
+    }
+// Work on the feature-branch 2.1 - Add search functionality code
+    @When("I enter product name as shirt")
+    public void i_enter_product_name_as_shirt() {
+       driver.findElement(By.name("_nkw")).sendKeys("book");
+       driver.findElement(By.id("gh-btn")).click();
+    }
+    @Then("system should display item_Count")
+    public void system_should_display_item_count() {
+        String productCount =driver.findElement(By.cssSelector(".srp-controls__count-heading")).getText();
+
+    }
+    @Then("close the browser2")
+    public void close_the_browser2() {
+        driver.close();
     }
 }
