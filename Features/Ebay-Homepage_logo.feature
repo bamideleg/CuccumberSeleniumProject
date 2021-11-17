@@ -7,3 +7,4 @@ Feature: EBY homepage logo validation
     Then I should see the EBY logo
     And close the browser
 
+# // You can add up to 10 test scenarios to the feature file
