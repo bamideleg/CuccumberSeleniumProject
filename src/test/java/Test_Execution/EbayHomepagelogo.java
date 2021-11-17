@@ -3,7 +3,11 @@ package Test_Execution;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class EbayHomepagelogo {
 
@@ -11,29 +15,38 @@ public class EbayHomepagelogo {
 
     @Given("I navigate to https:\\/\\/www.ebay.co.uk\\/")
     public void i_navigate_to_https_www_ebay_co_uk() {
-        // Write code here that turns the phrase above into concrete actions
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\New folder\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("https://www.ebay.co.uk/");
         System.out.println("Open the browser");
-        System.out.println("Open the browser");
-        System.out.println("Open the browser");
-
 
     }
+
     @Then("I should see the EBY logo")
     public void i_should_see_the_eby_logo() {
-        // Write code here that turns the phrase above into concrete actions
-        System.out.println("Logo is present");
-        System.out.println("Logo bug fixes");
-        System.out.println("Logo bug fixes");
+        Boolean Status = driver.findElement(By.id("gh-logo")).isDisplayed();
+        System.out.println("Status");
 
     }
     @And("close the browser")
     public void close_the_browser() {
-
-        System.out.println("close the browser");
        driver.close();
         System.out.println("close the browser");
-        System.out.println("close the browser2");
+
     }
+// Work on the feature-branch 2.1 - Add search functionality code
+    @When("I enter product name as shirt")
+    public void i_enter_product_name_as_shirt() {
+       driver.findElement(By.name("_nkw")).sendKeys("book");
+       driver.findElement(By.id("gh-btn")).click();
+    }
+    @Then("system should display item_Count")
+    public void system_should_display_item_count() {
+        String productCount =driver.findElement(By.cssSelector(".srp-controls__count-heading")).getText();
 
-
+    }
+    @Then("close the browser2")
+    public void close_the_browser2() {
+        driver.close();
+    }
 }
