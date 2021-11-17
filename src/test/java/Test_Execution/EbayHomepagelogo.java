@@ -33,3 +33,5 @@ public class EbayHomepagelogo {
 
     }
 }
+
+// You can add to 10 test scenarios
