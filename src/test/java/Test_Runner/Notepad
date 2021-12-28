@@ -1,0 +1,187 @@
+Working with Git feature branches | Git Workflows
+https://www.youtube.com/watch?v=u-YdIyV_apI
+
+Keeping Feature Branches Up To Date With Rebasing | Git Workflows
+https://www.youtube.com/watch?v=dqVqMwLzOjU
+
+Git Tutorial 6: Branches (Create, Merge, Delete a branch)
+https://www.youtube.com/watch?v=sgzkY5vFKQQ
+
+Git Github Tutorial 10: What is Pull Request?
+https://www.youtube.com/watch?v=e3bjQX9jIBk
+
+Test  runner-----------------
+
+scalaVersion := "2.13.5"
+
+libraryDependencies += "io.cucumber" %% "cucumber-scala" % "6.10.4"
+libraryDependencies += "io.cucumber" % "cucumber-junit" % "6.10.4"
+libraryDependencies += "junit" % "junit" % "4.13.2"
+libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % Test
+
+libraryDependencies += "org.sca+++++latest" %% "scalatest" % "3.0.8"
+libraryDependencies += "org.hamcrest" % "hamcrest-all" % "1.3" % Test
+
+
+-----------------------------------------------import io.cucumber.scala.{EN, ScalaDsl}
+
+//https://blog.knoldus.com/data-driven-framework-with-selenium-scala-and-sbt/
+
+class StepDefinitions extends ScalaDsl with EN {
+
+      Given("""I open the browser and navigate to https:\/\/www.ebay.co.uk""") { () =>
+         val host = "https://www.ebay.co.uk/"
+
+        println("Open the browser")
+
+      }
+      Then("""I should see ebay logo""") { () =>
+        println("Logo is present on the page")
+
+      }
+     And("""close the browser""") { () =>
+       println("User close the page")
+
+  }
+    When("""I enter the product name as Shirt""") { () =>
+      println("User enter the product name")
+    }
+    Then("""I should see the product list and product count""") { () =>
+      println("I should see the product list and product count ")
+    }
+    Then("""close the browser1""") { () =>
+      println("Close the page")
+    }
+  Then("""I should be able to add the product to the basket""") { () =>
+      println("Product successfully added to the basket")
+
+  }
+  Then("""I should be able to add the product to the cat and make a payment""") { () =>
+       println("User successfully make the payment")
+  }
+  Then("""close the browser2""") { () =>
+
+  }
+  When("""user enter the product name as (.*)""") { () =>
+    println("User search for multiple products")
+
+  }
+  Then("""app should see the product list and product count""") { () =>
+      println("App should display the product count")
+  }
+   Then("""close the browser3""") { () =>
+     println("User close the browser4")
+
+-------------------------------------------------------
+
+  
+  import io.cucumber.junit.{Cucumber, CucumberOptions}
+import org.junit.runner.RunWith
+
+@RunWith(classOf[Cucumber])
+@CucumberOptions(
+
+ //    features = Array ("classpath:Features/EbayLogoCheck.feature"),
+     features = Array ("classpath:Features"),
+     glue = Array("classpath:StepsDef"),
+     tags = ("@wip"),
+     monochrome = true,
+     plugin = Array("pretty", "html:target/cucumber", "json:target/cucumber/test-report.json", "junit:target/cucumber/test-report.xml")
+
+    )
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Keeping Feature Branches Up To Date With Rebasing | Git Workflows
+https://www.youtube.com/watch?v=dqVqMwLzOjU
+
+
+Working with Git feature branches | Git Workflows
+https://www.youtube.com/watch?v=u-YdIyV_apI
+
+
+Sample commit message
+---------------------------------------------------------
+Git commit message-  Example feature2.0 - Freaking out
+
+You can switch by click on the branch - checkout
+1. How to create branches
+2. How to switch between brnach 
+
+
+Working with Git feature branches | Git Workflows
+
+Keeping Feature Branches Up To Date With Rebasing | Git Workflows
+https://www.youtube.com/watch?v=dqVqMwLzOjU
+
+
+Git Tutorial 6: Branches (Create, Merge, Delete a branch)
+https://www.youtube.com/watch?v=sgzkY5vFKQQ
+
+
+Git Github Tutorial 10: What is Pull Request?
+https://www.youtube.com/watch?v=e3bjQX9jIBk
+
+User A sends an invite from GIT by inviting collaborators to work on codeUser B receives the invite and FORK the code into its own GitHub RepoUser B Pull the code into the local Repo/machineUser B fixed the issue or add an additional featureUser B commits the change to the local repo. a) git commitb)  git Add 3. Push to the remote private repo4. User then create a Pull Requesta) Select create a Pull request - Create New Pull Requestb) It shows where you want to merge which to what. The destination and the sourceRepo.c)  Once you create a Pull Request, User A will get a notification5. 
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+SCALA, SBT, CUCUMBER AND SELENIUM-WEBDRIVER
+https://rubygemtsl.com/2014/08/01/scala-sbt-cucumber-and-selenium-webdriver/
+
+SCALA, SBT, CUCUMBER AND SELENIUM-WEBDRIVER
+
+
+version := "0.1"
+
+scalaVersion :="2.10.7"
+
+libraryDependencies += "info.cukes" % "cucumber-scala_2.11" % "1.2.4"
+libraryDependencies += "info.cukes" % "cucumber-junit" % "1.2.6"
+libraryDependencies += "junit" % "junit" % "4.12"
+
+--------------------------------------------------------
+https://stackoverflow.com/questions/57720151/sbt-test-using-scala-cucumber-runner-class-running-but-not-executing-scenarios
+
+
+
+
+@RunWith(classOf[Cucumber])
+@CucumberOptions(
+  features = Array("classpath:features"),
+  glue = Array("classpath:features.steps"),
+  tags = Array("@my-tag"),
+  monochrome = true,
+  plugin = Array("pretty",
+    "html:target/cucumber",
+    "json:target/cucumber/test-report.json",
+    "junit:target/cucumber/test-report.xml")
+)
+class testRunner {}
+
+
+-------------------------------------------------------------------------------------------------
+
+
+Scenario 1 (/)
+Scenario 2 (/)
+Scenario 3 (/)
+Scenario 4 (/)
+Scenario 5 (/)
+Scenario 6 (/)
+
+Tested in development on versions:
+---------------------------------------
+tps-payments-backend	1.22.0
+tps-payments-frontend	0.91.0
+
+Bug: 
+* SAFE reference input field throws an error when there is space in the string
+* Lower case letters are rejected
+* Add-to-basket and Reset buttons are not properly aligned
+
+Sophie has raised tickets for the above issues in ops-6999 as the same issue were found.
