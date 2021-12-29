@@ -1,5 +1,11 @@
 package Test_Execution;
 
+
+// Shortcut
+// Crtl + K - used to commit a code
+// Alt = 9 - to view git log
+// To open your branches window ( Crtl + Shift + A)
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,6 +15,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Map;
+
+
 
 public class jobsearchParamMap {
 
