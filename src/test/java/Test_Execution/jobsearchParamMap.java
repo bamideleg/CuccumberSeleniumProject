@@ -20,10 +20,10 @@ public class jobsearchParamMap {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\New folder\\chromedriver.exe");
         driver =new ChromeDriver();
         driver.get("https://www.jobserve.com/");
-        System.out.println("Open the browser");
+        System.out.println("User open the browser");
 
     }
-
+    // To commit a code, simply enter (Crtl + K
     @When("I entered the jobType and Location")
     public void i_entered_the_job_type_and_location(io.cucumber.datatable.DataTable testData) {
 
@@ -32,6 +32,7 @@ public class jobsearchParamMap {
         driver.findElement(By.name("ctl00$main$srch$ctl_qs$txtKey")).sendKeys(testDataAsMap.get("jobType"));
         driver.findElement(By.name("ctl00$main$srch$ctl_qs$txtLoc")).sendKeys(testDataAsMap.get("location"));
 
+        System.out.println("User enter job type and location");
     }
     @And("click on search submit button")
     public void click_on_search_submit_button() {
