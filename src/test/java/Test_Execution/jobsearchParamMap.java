@@ -45,6 +45,7 @@ public class jobsearchParamMap {
 
     @And("close the browser5")
     public void close_the_browser5() {
+        driver.close(); // bug fix
 
     }
 
