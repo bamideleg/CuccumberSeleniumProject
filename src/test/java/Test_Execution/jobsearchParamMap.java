@@ -56,7 +56,8 @@ public class jobsearchParamMap {
     public void close_the_browser5() {
         driver.close(); // bug fix
         System.out.println("Worked on the hotfixes");
-        // Unit testing completed on the feature
+        // Unit testing is completed on the feature
+        // Deploy the code to system testing environment
 
     }
 
