@@ -41,6 +41,7 @@ public class jobsearchParamMap {
         driver.findElement(By.name("ctl00$main$srch$ctl_qs$txtLoc")).sendKeys(testDataAsMap.get("location"));
 
         System.out.println("User enter job type and location");
+        System.out.println(" Map data table code development is in progress");
     }
     @And("click on search submit button")
     public void click_on_search_submit_button() {
