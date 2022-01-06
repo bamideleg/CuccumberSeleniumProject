@@ -21,6 +21,7 @@ import java.util.Map;
 public class jobsearchParamMap {
 
 
+
     WebDriver driver = null;
 
     @Given("that I on navigate to https:\\/\\/www.jobserve.com\\/gb\\/en\\/Job-Search\\/")

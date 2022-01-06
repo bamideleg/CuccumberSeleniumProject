@@ -10,7 +10,11 @@ import org.junit.runner.RunWith;
 
         features = "Features",
         glue = {"TestExecution"},
-        plugin = {"pretty","html:target/HtmlReports"},
+ //       plugin = {"pretty","html:target/HtmlReports"},
+            plugin = {"pretty",
+                    "html:target/cucumber",
+                    "json:target/cucumber/test-report.json",
+                    "junit:target/cucumber/test-report.xml"},
         monochrome = true,
         dryRun = false
 
