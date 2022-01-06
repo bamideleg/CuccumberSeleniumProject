@@ -6,6 +6,7 @@
 #Working with Git feature branches | Git Workflows
 
 
+
 Feature: EBY multiple search using datatable
 
   Scenario: As a user I want to check that ebay logo is present
