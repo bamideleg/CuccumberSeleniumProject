@@ -1,5 +1,6 @@
 package Test_Runner;
 
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -9,7 +10,7 @@ import org.junit.runner.RunWith;
 
         features = "Features",
         glue = {"TestExecution"},
-        plugin = {"pretty","html:test-outout"},
+        plugin = {"pretty","html:target/HtmlReports"},
         monochrome = true,
         dryRun = false
 

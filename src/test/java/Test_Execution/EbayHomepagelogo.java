@@ -7,7 +7,10 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+import org.junit.Assert;
+//import org.testng.Assert;
+
+import static org.testng.Assert.*;
 
 public class EbayHomepagelogo {
 
@@ -24,8 +27,10 @@ public class EbayHomepagelogo {
 
     @Then("I should see the EBY logo")
     public void i_should_see_the_eby_logo() {
-        Boolean Status = driver.findElement(By.id("gh-logo")).isDisplayed();
-        System.out.println("Status");
+        Boolean status = driver.findElement(By.id("gh-logo")).isDisplayed();
+       // Assert.assertArrayEquals(true, status);
+
+        System.out.println(status);
 
     }
     @And("close the browser")

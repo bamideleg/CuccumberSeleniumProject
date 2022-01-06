@@ -1,5 +1,11 @@
 # https://www.youtube.com/watch?v=99qAnsYIYA0
 # Cucumber DataDriven with Maps in Selenium - Part 5
+# Create a Pull Request from IntelliJ
+# https://www.youtube.com/watch?v=lcSXH23xrY8
+#https://www.youtube.com/watch?v=u-YdIyV_apI
+#Working with Git feature branches | Git Workflows
+
+
 Feature: EBY multiple search using datatable
 
   Scenario: As a user I want to check that ebay logo is present
@@ -11,3 +17,5 @@ Feature: EBY multiple search using datatable
     And click on search submit button
     Then I should see the jobs in the location
     And close the browser5
+
+
