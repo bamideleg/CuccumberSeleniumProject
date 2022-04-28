@@ -26,8 +26,11 @@ public class jobsearchParamMap {
 
     @Given("that I on navigate to https:\\/\\/www.jobserve.com\\/gb\\/en\\/Job-Search\\/")
     public void that_i_on_navigate_to_https_www_jobserve_com_gb_en_job_search() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\New folder\\chromedriver.exe");
-        driver =new ChromeDriver();
+        String projectPath = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", projectPath+"\\src\\test\\BrowserDrivers\\chromedriver.exe");
+        driver = new ChromeDriver();
+
+
         driver.get("https://www.jobserve.com/");
         System.out.println("User open the browser");
 

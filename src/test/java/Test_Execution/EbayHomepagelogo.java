@@ -18,8 +18,11 @@ public class EbayHomepagelogo {
 
     @Given("I navigate to https:\\/\\/www.ebay.co.uk\\/")
     public void i_navigate_to_https_www_ebay_co_uk() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\New folder\\chromedriver.exe");
+
+        String projectPath = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", projectPath+"\\src\\test\\BrowserDrivers\\chromedriver.exe");
         driver = new ChromeDriver();
+
         driver.get("https://www.ebay.co.uk/");
         System.out.println("Open the browser");
 
