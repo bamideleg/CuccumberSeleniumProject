@@ -9,7 +9,7 @@ Feature: job search functionality
   Background:
     Given user open https://www.jobserve.com/
 
-  Scenario: As user I want to search ofr available job
+  Scenario: As user I want to search for available jobs
   #  Given user open https://www.jobserve.com/
     When enter JobType and location
     And click on search button

@@ -17,17 +17,19 @@ public class ebay_MultipleSearch<driver> {
     @Given("user open https:\\/\\/www.jobserve.com\\/")
     public void user_open_https_www_jobserve_com() {
 
-     System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\New folder\\chromedriver.exe");
-     driver =new ChromeDriver();
-     driver.get("https://www.jobserve.com/");
-     System.out.println("Open the browser");
+        String projectPath = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", projectPath+"\\src\\test\\BrowserDrivers\\chromedriver.exe");
+        driver = new ChromeDriver();
+
+        driver.get("https://www.jobserve.com/");
+        System.out.println("Open the browser");
 
     }
     @When("enter JobType and location")
     public void enter_job_type_and_location() {
         driver.findElement(By.name("ctl00$main$srch$ctl_qs$txtKey")).sendKeys("Project Manager ");
         driver.findElement(By.name("ctl00$main$srch$ctl_qs$txtLoc")).sendKeys("London");
-    System.out.println("Enter job type and location");
+        System.out.println("Enter job type and location");
 
     }
     @When("click on search button")
